@@ -19,7 +19,6 @@
 
       <nav class="topnav" aria-label="Разделы сайта">
         <a href="#menu">Меню</a>
-        <a href="#order">Заказ</a>
         <a href="#visit">Контакты</a>
       </nav>
     </header>
@@ -28,10 +27,10 @@
       <section class="intro" aria-labelledby="page-title">
         <div class="intro-copy">
           <p class="eyebrow">Сегодня в Riverside</p>
-          <h1 id="page-title">Меню ресторана у воды</h1>
+          <h1 id="page-title">Меню Riverside</h1>
           <p>
-            Завтраки, горячие блюда, десерты и напитки. Выберите позиции, а итог
-            заказа появится справа.
+            Барная карта и кухня: напитки, коктейли, закуски, суши, салаты,
+            горячие блюда и десерты для спокойного вечера у воды.
           </p>
         </div>
         <div class="hours">
@@ -41,51 +40,25 @@
       </section>
 
       <section class="menu-shell" id="menu">
-        <aside class="filters" aria-label="Фильтры меню">
-          <label class="search">
-            <span>Поиск</span>
-            <input id="searchInput" type="search" placeholder="Паста, кофе, рыба" />
-          </label>
+        <aside class="category-sidebar" aria-label="Категории меню">
+          <div class="category-sidebar-title">Разделы</div>
+          <div class="main-category-list" id="mainCategoryList"></div>
 
-          <div class="category-tabs" id="categoryTabs" role="tablist" aria-label="Категории меню"></div>
+          <div class="category-sidebar-title subcategory-title">Категории</div>
+          <div class="category-list" id="categoryList"></div>
         </aside>
 
-        <section class="menu-content" aria-live="polite">
+        <section class="menu-content">
           <div class="section-heading">
             <div>
               <p class="eyebrow">Выбор гостей</p>
-              <h2>Меню</h2>
+              <h2 id="activeCategoryTitle">Меню</h2>
             </div>
-            <span id="resultCount">0 блюд</span>
+            <span id="activeCategoryCount"></span>
           </div>
 
           <div class="menu-grid" id="menuGrid"></div>
         </section>
-
-        <aside class="order-panel" id="order" aria-label="Ваш заказ">
-          <div class="order-header">
-            <div>
-              <p class="eyebrow">Заказ</p>
-              <h2>Корзина</h2>
-            </div>
-            <button class="icon-button" id="clearCart" type="button" aria-label="Очистить заказ" title="Очистить">
-              x
-            </button>
-          </div>
-
-          <div class="order-list" id="orderList"></div>
-
-          <div class="order-empty" id="orderEmpty">
-            Выберите блюда из меню, чтобы собрать заказ.
-          </div>
-
-          <div class="order-total">
-            <span>Итого</span>
-            <strong id="orderTotal">0.00 EUR</strong>
-          </div>
-
-          <button class="primary-button" id="checkoutButton" type="button">Оформить заказ</button>
-        </aside>
       </section>
 
       <section class="visit" id="visit" aria-labelledby="visit-title">
@@ -100,8 +73,6 @@
         </div>
       </section>
     </main>
-
-    <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
     <script src="script.js"></script>
   </body>
