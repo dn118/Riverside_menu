@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Riverside Menu</title>
+    <link rel="preconnect" href="https://images.unsplash.com" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="Riverside">
+        <span class="brand-mark">R</span>
+        <span>
+          <strong>Riverside</strong>
+          <small>restaurant menu</small>
+        </span>
+      </a>
+
+      <nav class="topnav" aria-label="Разделы сайта">
+        <a href="#menu">Меню</a>
+        <a href="#order">Заказ</a>
+        <a href="#visit">Контакты</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="intro" aria-labelledby="page-title">
+        <div class="intro-copy">
+          <p class="eyebrow">Сегодня в Riverside</p>
+          <h1 id="page-title">Меню ресторана у воды</h1>
+          <p>
+            Завтраки, горячие блюда, десерты и напитки. Выберите позиции, а итог
+            заказа появится справа.
+          </p>
+        </div>
+        <div class="hours">
+          <span>Открыто</span>
+          <strong>10:00 - 23:00</strong>
+        </div>
+      </section>
+
+      <section class="menu-shell" id="menu">
+        <aside class="filters" aria-label="Фильтры меню">
+          <label class="search">
+            <span>Поиск</span>
+            <input id="searchInput" type="search" placeholder="Паста, кофе, рыба" />
+          </label>
+
+          <div class="category-tabs" id="categoryTabs" role="tablist" aria-label="Категории меню"></div>
+        </aside>
+
+        <section class="menu-content" aria-live="polite">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Выбор гостей</p>
+              <h2>Меню</h2>
+            </div>
+            <span id="resultCount">0 блюд</span>
+          </div>
+
+          <div class="menu-grid" id="menuGrid"></div>
+        </section>
+
+        <aside class="order-panel" id="order" aria-label="Ваш заказ">
+          <div class="order-header">
+            <div>
+              <p class="eyebrow">Заказ</p>
+              <h2>Корзина</h2>
+            </div>
+            <button class="icon-button" id="clearCart" type="button" aria-label="Очистить заказ" title="Очистить">
+              x
+            </button>
+          </div>
+
+          <div class="order-list" id="orderList"></div>
+
+          <div class="order-empty" id="orderEmpty">
+            Выберите блюда из меню, чтобы собрать заказ.
+          </div>
+
+          <div class="order-total">
+            <span>Итого</span>
+            <strong id="orderTotal">0.00 EUR</strong>
+          </div>
+
+          <button class="primary-button" id="checkoutButton" type="button">Оформить заказ</button>
+        </aside>
+      </section>
+
+      <section class="visit" id="visit" aria-labelledby="visit-title">
+        <div>
+          <p class="eyebrow">Где нас найти</p>
+          <h2 id="visit-title">Набережная, 12</h2>
+          <p>Бронирование столов: +371 20 000 000</p>
+        </div>
+        <div class="visit-actions">
+          <a href="tel:+37120000000">Позвонить</a>
+          <a href="mailto:hello@riverside.example">Написать</a>
+        </div>
+      </section>
+    </main>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
